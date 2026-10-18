@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "csvdoctor"
+version = "1.0.0"
+description = "Profile CSV files and detect missing values, duplicate rows, type inconsistencies, and column quality issues."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "CSVDoctor contributors"}]
+
+[project.scripts]
+csv-doctor = "csv_doctor.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/bafnayeygian/CSVDoctor"
+Issues = "https://github.com/bafnayeygian/CSVDoctor/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
